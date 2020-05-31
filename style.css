@@ -1,0 +1,142 @@
+body{
+   background-color: #548850;
+}
+
+.heading {
+  letter-spacing: 6px;
+  margin: 2rem 0;
+}
+
+#cube-1 .front, #cube-2 .front {
+  transform: 
+    translateZ(100px);
+}
+
+#cube-1 .back, #cube-2 .back {
+  transform: 
+    rotateX(-180deg)
+    translateZ(100px);
+}
+
+#cube-1 .right, #cube-2 .right {
+  transform:
+    rotateY(90deg)
+    translateZ(100px);
+}
+
+#cube-1 .left, #cube-2 .left {
+  transform:
+    rotateY(-90deg)
+    translateZ(100px);
+}
+
+#cube-1 .top, #cube-2 .top {
+  transform:
+    rotateX(90deg)
+    translateZ(100px);
+}
+
+#cube-1 .bottom, #cube-2 .bottom{
+  transform:
+    rotateX(-90deg)
+    translateZ(100px);
+}
+
+ #container-die-1, #container-die-2{
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto 40px;
+  perspective: 1000px;
+  perspective-origin: 50% 100%;
+}
+
+#cube-1, #cube-2{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 3s;
+}
+
+#cube-1:hover, #cube-2:hover {
+  cursor: pointer;
+}
+
+#cube-1 div, #cube-2 div {
+  background: #fff;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #ddd;
+  margin: 0 auto;   
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 500%;
+  text-align: center;
+}
+
+.dot {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 7px solid #202020;
+  background: #303030;
+  border-radius: 30px;  
+}
+
+.front .dot1 { top: 75px; left: 75px; }
+.back .dot1 { top: 30px; left: 30px; }
+.back .dot2 { top: 120px; left: 120px; }
+.right .dot1 { top: 30px; left: 30px; }
+.right .dot2 { top: 75px; left: 75px; }
+.right .dot3 { top: 120px; left: 120px; }
+.left .dot1 { top: 30px; left: 30px; }
+.left .dot2 { top: 30px; left: 120px; }
+.left .dot3 { top: 120px; left: 30px; }
+.left .dot4 { top: 120px; left: 120px; }
+.top .dot1 { top: 30px; left: 30px; }
+.top .dot2 { top: 30px; left: 120px; }
+.top .dot3 { top: 75px; left: 75px; }
+.top .dot4 { top: 120px; left: 30px; }
+.top .dot5 { top: 120px; left: 120px; }
+.bottom .dot1 { top: 30px; left: 20px; }
+.bottom .dot2 { top: 30px; left: 75px; }
+.bottom .dot3 { top: 30px; left: 130px; }
+.bottom .dot4 { top: 125px; left: 130px; }
+.bottom .dot5 { top: 125px; left: 75px; }
+.bottom .dot6 { top: 125px; left: 20px; }
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+  h1 {
+  font-size: 80px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+  h1 {
+  font-size: 60px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  h1 {
+  font-size: 40px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
